@@ -1,0 +1,879 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Untuk Sara Octaviany ❤️</title>
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    min-height: 100vh;
+    font-family: "Segoe UI", system-ui, sans-serif;
+    background:
+        radial-gradient(circle at 20% 20%, rgba(255,255,255,.5), transparent 25%),
+        radial-gradient(circle at 80% 30%, rgba(255,180,210,.35), transparent 25%),
+        linear-gradient(135deg, #ffd6e7, #f8c8dc, #d9c2ff, #ffc6d9);
+    background-size: 200% 200%;
+    animation: backgroundMove 12s ease infinite;
+    color: #6d3150;
+    overflow-x: hidden;
+    cursor: default;
+}
+
+@keyframes backgroundMove {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* =========================
+   LOADING SCREEN
+========================= */
+
+#loading {
+    position: fixed;
+    inset: 0;
+    z-index: 9999;
+    background: linear-gradient(135deg, #ffb6d2, #d9b8ff);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    transition: 1s;
+}
+
+.loading-heart {
+    font-size: 75px;
+    animation: heartbeat 1s infinite;
+}
+
+.loading-text {
+    margin-top: 15px;
+    font-size: 18px;
+    color: white;
+    letter-spacing: 2px;
+}
+
+@keyframes heartbeat {
+    0%,100% { transform: scale(1); }
+    25% { transform: scale(1.25); }
+    40% { transform: scale(1); }
+    60% { transform: scale(1.18); }
+}
+
+/* =========================
+   FLOATING ELEMENTS
+========================= */
+
+.floating {
+    position: fixed;
+    bottom: -80px;
+    pointer-events: none;
+    z-index: 1;
+    animation: floatUp linear forwards;
+    opacity: .8;
+}
+
+@keyframes floatUp {
+    0% {
+        transform: translateY(0) rotate(0deg) scale(.8);
+        opacity: 0;
+    }
+
+    10% {
+        opacity: .9;
+    }
+
+    50% {
+        transform: translateY(-50vh) rotate(180deg) scale(1);
+    }
+
+    100% {
+        transform: translateY(-115vh) rotate(360deg) scale(.7);
+        opacity: 0;
+    }
+}
+
+/* =========================
+   HERO
+========================= */
+
+.hero {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px 20px;
+    position: relative;
+    z-index: 2;
+}
+
+.hero-card {
+    width: min(900px, 95%);
+    padding: 60px 40px;
+    text-align: center;
+    border-radius: 40px;
+
+    background: rgba(255,255,255,.38);
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
+
+    border: 1px solid rgba(255,255,255,.6);
+
+    box-shadow:
+        0 25px 80px rgba(120,50,90,.18),
+        inset 0 1px 0 rgba(255,255,255,.7);
+
+    animation: cardAppear 1.5s ease;
+}
+
+@keyframes cardAppear {
+    from {
+        opacity: 0;
+        transform: translateY(50px) scale(.9);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+.flower {
+    font-size: 55px;
+    animation: flowerFloat 3s ease-in-out infinite;
+}
+
+@keyframes flowerFloat {
+    0%,100% { transform: translateY(0) rotate(-5deg); }
+    50% { transform: translateY(-12px) rotate(5deg); }
+}
+
+.hero h1 {
+    margin-top: 15px;
+    font-size: clamp(32px, 6vw, 65px);
+    color: #a83d69;
+    text-shadow: 0 5px 20px rgba(168,61,105,.15);
+}
+
+.hero h1 span {
+    display: inline-block;
+    animation: nameGlow 2s ease-in-out infinite;
+}
+
+@keyframes nameGlow {
+    0%,100% {
+        text-shadow: 0 0 5px rgba(255,255,255,.5);
+    }
+
+    50% {
+        text-shadow:
+            0 0 10px #fff,
+            0 0 25px #ff8fba,
+            0 0 40px #ff8fba;
+    }
+}
+
+.subtitle {
+    margin-top: 20px;
+    font-size: 19px;
+    color: #82405d;
+}
+
+.scroll {
+    margin-top: 45px;
+    display: inline-block;
+    padding: 14px 27px;
+    border-radius: 50px;
+    color: white;
+    background: linear-gradient(135deg,#ff669b,#c47aff);
+    box-shadow: 0 10px 30px rgba(200,80,150,.3);
+    animation: buttonPulse 2s infinite;
+}
+
+@keyframes buttonPulse {
+    0%,100% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.06);
+    }
+}
+
+/* =========================
+   LETTER
+========================= */
+
+.letter-section {
+    min-height: 100vh;
+    padding: 80px 20px;
+    position: relative;
+    z-index: 2;
+}
+
+.letter {
+    width: min(850px, 95%);
+    margin: auto;
+
+    background:
+        linear-gradient(
+            rgba(255,255,255,.88),
+            rgba(255,244,249,.91)
+        );
+
+    padding: clamp(30px, 6vw, 65px);
+    border-radius: 35px;
+
+    box-shadow:
+        0 30px 90px rgba(105,40,80,.2),
+        0 0 0 1px rgba(255,255,255,.8);
+
+    position: relative;
+
+    transform: translateY(50px);
+    opacity: 0;
+    transition: 1s ease;
+}
+
+.letter.show {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+.letter::before,
+.letter::after {
+    content: "🌷";
+    position: absolute;
+    font-size: 45px;
+}
+
+.letter::before {
+    top: -18px;
+    left: 25px;
+    transform: rotate(-20deg);
+}
+
+.letter::after {
+    bottom: -18px;
+    right: 25px;
+    transform: rotate(20deg);
+}
+
+.letter h2 {
+    text-align: center;
+    font-size: 30px;
+    color: #a83d69;
+    margin-bottom: 35px;
+}
+
+.letter p {
+    font-size: 18px;
+    line-height: 1.9;
+    margin-bottom: 25px;
+    color: #70435a;
+}
+
+.letter strong {
+    color: #d44278;
+}
+
+.signature {
+    text-align: center;
+    margin-top: 45px;
+    font-size: 24px;
+    color: #b13f70;
+}
+
+/* =========================
+   HEART DIVIDER
+========================= */
+
+.heart-divider {
+    text-align: center;
+    font-size: 30px;
+    margin: 35px 0;
+    letter-spacing: 10px;
+    animation: dividerPulse 2s infinite;
+}
+
+@keyframes dividerPulse {
+    0%,100% { transform: scale(1); }
+    50% { transform: scale(1.12); }
+}
+
+/* =========================
+   FINAL
+========================= */
+
+.final {
+    min-height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 50px 20px 100px;
+    position: relative;
+    z-index: 2;
+}
+
+.final-card {
+    width: min(800px,95%);
+    text-align: center;
+    padding: 60px 30px;
+    border-radius: 40px;
+
+    background: rgba(255,255,255,.35);
+    backdrop-filter: blur(15px);
+
+    border: 1px solid rgba(255,255,255,.6);
+
+    box-shadow: 0 25px 80px rgba(100,40,80,.18);
+}
+
+.final-heart {
+    font-size: 90px;
+    animation: heartbeat 1.4s infinite;
+}
+
+.final h2 {
+    margin-top: 20px;
+    font-size: clamp(28px,5vw,48px);
+    color: #a83d69;
+}
+
+.final p {
+    margin-top: 20px;
+    font-size: 18px;
+    line-height: 1.8;
+}
+
+/* =========================
+   SPARKLES
+========================= */
+
+.sparkle {
+    position: fixed;
+    pointer-events: none;
+    z-index: 999;
+    animation: sparkleAnimation .8s ease forwards;
+}
+
+@keyframes sparkleAnimation {
+    0% {
+        opacity: 1;
+        transform: scale(0) rotate(0deg);
+    }
+
+    100% {
+        opacity: 0;
+        transform: scale(1.8) rotate(180deg);
+    }
+}
+
+/* =========================
+   MUSIC BUTTON
+========================= */
+
+.music-button {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 1000;
+
+    width: 55px;
+    height: 55px;
+
+    border: none;
+    border-radius: 50%;
+
+    background: rgba(255,255,255,.75);
+    backdrop-filter: blur(10px);
+
+    box-shadow: 0 8px 25px rgba(100,40,80,.2);
+
+    font-size: 23px;
+    cursor: pointer;
+
+    transition: .3s;
+}
+
+.music-button:hover {
+    transform: scale(1.12) rotate(10deg);
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media(max-width:600px) {
+
+    .hero-card {
+        padding: 45px 22px;
+        border-radius: 30px;
+    }
+
+    .letter {
+        padding: 30px 23px;
+        border-radius: 25px;
+    }
+
+    .letter p {
+        font-size: 16px;
+        line-height: 1.8;
+    }
+
+    .final-card {
+        padding: 45px 20px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<!-- LOADING -->
+<div id="loading">
+    <div class="loading-heart">💗</div>
+    <div class="loading-text">Mempersiapkan sesuatu untuk Sara...</div>
+</div>
+
+<!-- MUSIC BUTTON -->
+<button class="music-button" id="musicButton" title="Musik">
+    🎵
+</button>
+
+<!-- HERO -->
+<section class="hero">
+
+    <div class="hero-card">
+
+        <div class="flower">🌷</div>
+
+        <h1>
+            Untuk <span>Sara Octaviany</span> 🥺❤️
+        </h1>
+
+        <p class="subtitle">
+            Sebuah pesan kecil dari hati yang penuh dengan rasa sayang 💗
+        </p>
+
+        <div class="heart-divider">
+            💕 ✨ 💕
+        </div>
+
+        <div class="scroll">
+            Scroll perlahan ya, sayang... 🥺🌷
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- LETTER -->
+<section class="letter-section">
+
+    <div class="letter" id="letter">
+
+        <h2>
+            Sara Octaviany, sayangkuuu 🥺❤️🌷
+        </h2>
+
+        <p>
+            Aku cuma mau bilang satu hal yang mungkin nggak akan pernah cukup
+            kalau cuma diucapkan sekali:
+            <strong>aku sayang banget sama kamu</strong> 🥹💗
+        </p>
+
+        <p>
+            Kamu bukan cuma seseorang yang aku cintai, tapi kamu adalah alasan
+            kenapa hari-hariku terasa lebih indah 🌸✨ Kamu itu seperti rumah—
+            tempat hatiku selalu ingin pulang 🏡❤️.
+            Senyummu bisa bikin hari burukku jadi lebih baik,
+            perhatian kecilmu bisa bikin hatiku hangat,
+            dan keberadaanmu aja sudah cukup untuk membuatku merasa beruntung
+            🥺🫶🏻💕
+        </p>
+
+        <div class="heart-divider">
+            🌸 💗 🌸
+        </div>
+
+        <p>
+            Sara, kalau aku boleh meminta satu hal kepada waktu,
+            aku ingin waktu memperlambat semuanya saat aku sedang bersamamu
+            ⏳🥹❤️ Karena rasanya setiap detik bersamamu terlalu berharga
+            untuk berlalu begitu cepat.
+        </p>
+
+        <p>
+            Aku mungkin nggak sempurna 😔, kadang bisa salah,
+            bisa bikin kamu kesal, atau belum selalu bisa menjadi pasangan
+            yang terbaik. Tapi satu hal yang nggak pernah berubah:
+            <strong>aku selalu ingin belajar menjadi lebih baik demi kamu</strong>
+            🥺🤍
+        </p>
+
+        <div class="heart-divider">
+            🫶🏻 ✨ 🫶🏻
+        </div>
+
+        <p>
+            Aku ingin tetap menjadi orang yang menggenggam tanganmu ketika
+            kamu bahagia 🤝🏻💕, memelukmu ketika kamu sedih 🫂🥺,
+            mendengarkan ceritamu ketika kamu lelah 👂🏻❤️,
+            dan tetap berada di sampingmu ketika dunia terasa berat
+            🌎🤍
+        </p>
+
+        <div class="signature">
+            Dengan penuh rasa sayang ❤️<br>
+            🌷 Untuk Sara 🌷
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- FINAL -->
+<section class="final">
+
+    <div class="final-card">
+
+        <div class="final-heart">
+            💖
+        </div>
+
+        <h2>
+            Kamu sangat berarti. 🥺
+        </h2>
+
+        <p>
+            Semoga setiap kali kamu membuka halaman ini,
+            kamu selalu ingat bahwa ada seseorang yang
+            sangat menghargai keberadaanmu. 🌸
+        </p>
+
+        <div class="heart-divider">
+            ❤️ ❤️ ❤️
+        </div>
+
+        <p>
+            Sara Octaviany 🌷<br>
+            Terima kasih sudah menjadi bagian indah
+            dalam perjalanan ini. ✨
+        </p>
+
+    </div>
+
+</section>
+
+
+<script>
+
+/* =========================
+   LOADING SCREEN
+========================= */
+
+window.addEventListener("load", () => {
+
+    setTimeout(() => {
+
+        document.getElementById("loading").style.opacity = "0";
+
+        setTimeout(() => {
+            document.getElementById("loading").style.display = "none";
+        }, 1000);
+
+    }, 1800);
+
+});
+
+
+/* =========================
+   FLOATING HEARTS & FLOWERS
+========================= */
+
+const floatingItems = [
+    "❤️",
+    "💕",
+    "💗",
+    "💖",
+    "💘",
+    "🌸",
+    "🌷",
+    "✨",
+    "💫",
+    "🦋"
+];
+
+function createFloatingItem() {
+
+    const item = document.createElement("div");
+
+    item.className = "floating";
+
+    item.innerHTML =
+        floatingItems[
+            Math.floor(Math.random() * floatingItems.length)
+        ];
+
+    item.style.left = Math.random() * 100 + "vw";
+
+    item.style.fontSize =
+        (15 + Math.random() * 30) + "px";
+
+    item.style.animationDuration =
+        (5 + Math.random() * 7) + "s";
+
+    document.body.appendChild(item);
+
+    setTimeout(() => {
+        item.remove();
+    }, 13000);
+}
+
+setInterval(createFloatingItem, 450);
+
+
+/* =========================
+   SCROLL REVEAL
+========================= */
+
+const letter = document.getElementById("letter");
+
+const observer = new IntersectionObserver(
+    entries => {
+
+        entries.forEach(entry => {
+
+            if (entry.isIntersecting) {
+                entry.target.classList.add("show");
+            }
+
+        });
+
+    },
+    {
+        threshold: .2
+    }
+);
+
+observer.observe(letter);
+
+
+/* =========================
+   CLICK SPARKLES
+========================= */
+
+document.addEventListener("click", function(e) {
+
+    const emojis = [
+        "❤️",
+        "💗",
+        "✨",
+        "💖",
+        "🌸",
+        "💕"
+    ];
+
+    for(let i = 0; i < 7; i++) {
+
+        const sparkle = document.createElement("div");
+
+        sparkle.className = "sparkle";
+
+        sparkle.innerHTML =
+            emojis[Math.floor(Math.random() * emojis.length)];
+
+        sparkle.style.left =
+            (e.clientX + (Math.random() * 80 - 40)) + "px";
+
+        sparkle.style.top =
+            (e.clientY + (Math.random() * 80 - 40)) + "px";
+
+        sparkle.style.fontSize =
+            (15 + Math.random() * 20) + "px";
+
+        document.body.appendChild(sparkle);
+
+        setTimeout(() => {
+            sparkle.remove();
+        }, 800);
+    }
+
+});
+
+
+/* =========================
+   CURSOR HEART TRAIL
+========================= */
+
+let lastHeart = 0;
+
+document.addEventListener("mousemove", function(e) {
+
+    const now = Date.now();
+
+    if(now - lastHeart < 100) return;
+
+    lastHeart = now;
+
+    const heart = document.createElement("div");
+
+    heart.innerHTML = "💗";
+
+    heart.style.position = "fixed";
+    heart.style.left = e.clientX + "px";
+    heart.style.top = e.clientY + "px";
+    heart.style.pointerEvents = "none";
+    heart.style.zIndex = "998";
+    heart.style.fontSize = "12px";
+
+    heart.style.transition =
+        "all .8s ease";
+
+    document.body.appendChild(heart);
+
+    requestAnimationFrame(() => {
+
+        heart.style.transform =
+            "translateY(-25px) scale(1.5)";
+
+        heart.style.opacity = "0";
+
+    });
+
+    setTimeout(() => {
+        heart.remove();
+    }, 800);
+
+});
+
+
+/* =========================
+   MUSIC BUTTON
+========================= */
+
+const musicButton =
+    document.getElementById("musicButton");
+
+let musicPlaying = false;
+
+/*
+   Kalau ingin menambahkan musik,
+   letakkan file musik bernama:
+
+   music.mp3
+
+   di folder yang sama dengan HTML ini.
+*/
+
+const audio = new Audio("music.mp3");
+audio.loop = true;
+
+musicButton.addEventListener("click", () => {
+
+    if(!musicPlaying) {
+
+        audio.play().catch(() => {
+            alert("Letakkan file musik bernama 'music.mp3' di folder yang sama dengan HTML ini.");
+        });
+
+        musicButton.innerHTML = "⏸️";
+        musicPlaying = true;
+
+    } else {
+
+        audio.pause();
+
+        musicButton.innerHTML = "🎵";
+        musicPlaying = false;
+
+    }
+
+});
+
+
+/* =========================
+   EXTRA HEART BURST
+========================= */
+
+function heartBurst() {
+
+    const centerX = window.innerWidth / 2;
+    const centerY = window.innerHeight / 2;
+
+    for(let i = 0; i < 25; i++) {
+
+        const heart = document.createElement("div");
+
+        heart.innerHTML =
+            Math.random() > .5 ? "❤️" : "✨";
+
+        heart.style.position = "fixed";
+        heart.style.left = centerX + "px";
+        heart.style.top = centerY + "px";
+        heart.style.zIndex = "1000";
+        heart.style.pointerEvents = "none";
+
+        document.body.appendChild(heart);
+
+        const angle =
+            Math.random() * Math.PI * 2;
+
+        const distance =
+            100 + Math.random() * 300;
+
+        const x =
+            Math.cos(angle) * distance;
+
+        const y =
+            Math.sin(angle) * distance;
+
+        heart.animate(
+            [
+                {
+                    transform: "translate(-50%, -50%) scale(0)",
+                    opacity: 1
+                },
+                {
+                    transform:
+                        `translate(${x}px, ${y}px) scale(1.4)`,
+                    opacity: 0
+                }
+            ],
+            {
+                duration: 1200 + Math.random() * 800,
+                easing: "cubic-bezier(.2,.8,.3,1)"
+            }
+        );
+
+        setTimeout(() => {
+            heart.remove();
+        }, 2000);
+    }
+}
+
+
+/* Jalankan ledakan hati setelah halaman siap */
+
+setTimeout(() => {
+    heartBurst();
+}, 2300);
+
+</script>
+
+</body>
+</html>
